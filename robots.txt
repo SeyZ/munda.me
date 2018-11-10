@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.munda.me/sitemap.xml
