@@ -93,6 +93,15 @@ header {
     margin: 0;
   }
 
+  h4 {
+    a {
+      color: red;
+      &:hover {
+        color: darken(red, 20%);
+      }
+    }
+  }
+
   p {
     font-family: "San Francisco";
     color: #868e96;
