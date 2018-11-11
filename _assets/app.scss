@@ -157,6 +157,26 @@ header {
   }
 }
 
+.videos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 calc(((100%) - #{30px * 4}) / 3);
+    margin-right: 30px;
+
+    img {
+      border-radius: 5px;
+
+      &:hover {
+        transform: translateY(-3px);
+        transition: transform 350ms ease-out;
+      }
+    }
+  }
+}
+
 @media (min-width:320px)  {
   .container { padding: 20px; }
   header {
