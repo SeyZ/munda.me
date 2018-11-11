@@ -1,0 +1,35 @@
+@media only screen and (max-width: $screen-xxs) {
+  .container {
+    section {
+      margin: 0 $gutter;
+    }
+
+    &__item {
+      margin-top: $gutter * 2;
+
+      aside {
+        display: none;
+      }
+
+      .product-item {
+        margin-bottom: $gutter;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $screen-xs) {
+  .container {
+    &__item {
+      align-items: center;
+
+      aside {
+        img {
+          width: 100px;
+          margin: 0 $gutter;
+        }
+      }
+    }
+  }
+}
+

@@ -1,3 +1,4 @@
+@import "normalize.css";
 @import "variables";
 @import "typography";
 
@@ -5,47 +6,36 @@
   box-sizing: border-box
 }
 
-body,html {
+body, html {
   font-family: "San Francisco";
   -webkit-font-smoothing: antialiased;
-  font-size: var(--font-size);
-  background: var(--dark);
-  color: var(--fg-color);
   line-height: 1;
   margin: 0;
-  padding: 0
-}
-
-body {
-  overflow-x: hidden
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 a {
   text-decoration: none;
-  color: #ff7400;
+  color: $link-color;
   &:hover {
-    color: darken(#ff7400, 20%);
+    color: $link-color-hover;
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
   }
 }
 
 header {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: 1;
-  background: url('/public/img/background-header.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  height: 97%;
+  background-image: url('/public/img/background-header.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 
   h1 {
     color: white;
@@ -55,35 +45,14 @@ header {
   }
 
   h2 {
-    color: #888888;
+    color: $grey-dark;
     font-size: 12px;
     letter-spacing: 4px;
     text-transform: uppercase;
   }
-
-  &:after {
-    position: absolute;
-    top: calc(100% - 60px);
-    left: 0;
-    height: 100%;
-    width: 150%;
-    content: '';
-    background: white;
-    -webkit-transform: rotate(-3deg);
-    -moz-transform: rotate(-3deg);
-    transform: rotate(-3deg);
-  }
 }
 
 .content-wrapper {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  min-height: 15%;
-  z-index: 2;
-  background: white;
-
   h3 {
     color: black;
     font-weight: bold;
@@ -95,16 +64,15 @@ header {
 
   h4 {
     a {
-      color: red;
+      color: $link-color-alt;
       &:hover {
-        color: darken(red, 20%);
+        color: $link-color-alt-hover;
       }
     }
   }
 
   p {
-    font-family: "San Francisco";
-    color: #868e96;
+    color: $text-color;
     font-size: 15px;
     line-height: 25px;
     text-align: justify;
@@ -112,13 +80,13 @@ header {
 }
 
 .container {
-  width: 950px;
   margin: 0 auto;
+  max-width: 960px;
 
   &__item {
     display: flex;
     justify-content: space-between;
-    margin-top: 150px;
+    margin-top: $gutter * 3;
 
     aside {
       img {
@@ -131,7 +99,7 @@ header {
     }
 
     .product-item {
-      margin-bottom: 60px;
+      margin-bottom: $gutter * 2;
     }
   }
 
@@ -164,7 +132,7 @@ header {
 
   &__item {
     flex: 0 0 calc(((100%) - #{30px * 4}) / 3);
-    margin-right: 30px;
+    margin-right: $gutter;
 
     img {
       border-radius: 5px;
@@ -177,17 +145,4 @@ header {
   }
 }
 
-@media (min-width:320px)  {
-  .container { padding: 20px; }
-  header {
-    .small { font-size: 20px; }
-    .large { font-size: 40px; }
-  }
-}
-
-@media (min-width:961px)  {
-  header {
-    .small { font-size: 30px; }
-    .large { font-size: 60px; }
-  }
-}
+@import "responsive";

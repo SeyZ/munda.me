@@ -1,1 +1,19 @@
 $font-path: "/public/fonts/";
+
+$orange: #ff7400;
+$grey: #868e96;
+$grey-dark: #888888;
+
+$gutter: 30px;
+
+$text-color: $grey;
+
+$link-color: $orange;
+$link-color-hover: darken($link-color, 20%);
+$link-color-alt: red;
+$link-color-alt-hover: darken($link-color-alt, 20%);
+
+$screen-lg: 1280px;
+$screen-md: 1024px;
+$screen-xs: 768px;
+$screen-xxs: 595px;
