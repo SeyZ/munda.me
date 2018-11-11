@@ -66,6 +66,7 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    yui-compressor (0.12.0)
 
 PLATFORMS
   ruby
@@ -78,6 +79,7 @@ DEPENDENCIES
   minima (~> 2.0)
   rake
   tzinfo-data
+  yui-compressor
 
 BUNDLED WITH
    1.16.6
