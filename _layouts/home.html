@@ -16,5 +16,10 @@
   </head>
   <body>
     {{ content }}
+
+    {% javascript_asset_tag global %}
+    - /_assets/jquery.js
+    - /_assets/munda.js
+    {% endjavascript_asset_tag %}
   </body>
 </html>
