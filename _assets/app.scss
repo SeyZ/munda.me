@@ -37,6 +37,18 @@ a {
   background-size: cover;
   background-position: center;
 
+  &:after {
+    content: '';
+    background: white;
+    height: 20%;
+    bottom: -40px;
+    transform: skewY(-2deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
   &__content {
     position: relative;
     text-align: center;
@@ -44,6 +56,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
   }
 
   h1 {
