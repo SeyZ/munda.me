@@ -26,12 +26,14 @@ module JekyllAssetPipeline
   end
 
   class JavaScriptCompressor < JekyllAssetPipeline::Compressor
+    require 'closure-compiler'
+
     def self.filetype
       '.js'
     end
 
     def compress
-      return @content
+      return Closure::Compiler.new.compile(@content)
     end
   end
 end
